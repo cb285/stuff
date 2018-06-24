@@ -1,0 +1,20 @@
+! copy/paste
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! colors
+urxvt*foreground: white
+urxvt*background: black
+
+! transparency
+urxvt*transparent: true
+urxvt*shading: 35
+
+! remove scroll bar
+URxvt*scrollBar: false
+
+! font
+URxvt.font: xft:DejaVu Sans Mono:size=11
+
+! set font spacing
+URxvt.letterSpace: -1
