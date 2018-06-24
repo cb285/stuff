@@ -1,0 +1,1 @@
+filebot -script fn:amc --action move -non-strict "/media/STORAGE/complete/" --output "/media/STORAGE/Media/" --log-file filebot.log --conflict auto --def excludeList=/home/clayton/.kodi-scripts/filebotExcludeList.txt subtitles=en artwork=y clean=y music=y --def minFileSize=25 minLengthMS=0
