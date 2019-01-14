@@ -11,15 +11,6 @@
   (transient-mark-mode 1) ;; No region when it is not highlighted
   (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
-;; CC mode customizations
-
-(defun my-c-mode-common-hook ()
-    ;; use Ellemtel sytle for all C-like languages
-    (c-set-style "ellemtel")
-      ;; other customizations would go here
-    )
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,6 +20,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
+ '(c-basic-offset 4)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (whiteboard)))
  '(inhibit-startup-screen t)
@@ -45,3 +37,10 @@
   '(("gnu" . "http://elpa.gnu.org/packages/")
 ("marmalade" . "http://marmalade-repo.org/packages/")
 ("melpa" . "http://melpa.org/packages/")))
+
+;; set indentions to 4 spaces
+(setq default-tab-width 4)
+;; set C indentations to 4 spaces
+(setq c-basic-offset 4)
+;; use spaces instead of tab character
+(setq indent-tabs-mode nil)0
