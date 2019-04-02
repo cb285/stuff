@@ -43,4 +43,4 @@
 ;; set C indentations to 4 spaces
 (setq c-basic-offset 4)
 ;; use spaces instead of tab character
-(setq indent-tabs-mode nil)0
+(setq indent-tabs-mode nil)

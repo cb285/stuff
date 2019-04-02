@@ -63,4 +63,9 @@ alias media-filebot='sh ~/.kodi-scripts/filebot.sh'
 alias screenshot='import -window root $@'
 alias screenshot_window='import $@'
 
+# svn
+alias svn_precommit="svn status | grep '^!' | sed 's/! *//' | xargs -d '\n' svn delete --force"
+
+# search text files
+alias grepr='grep -rns $@'
 
