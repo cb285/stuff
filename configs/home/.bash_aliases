@@ -37,14 +37,12 @@ alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -ch'
 
-
 # systemctl
 alias sdisable=' sudo systemctl disable $@'
 alias senable='sudo systemctl enable $@'
 alias srestart='sudo systemctl restart $@'
 alias sstart='sudo systemctl start $@'
 alias sstatus='sudo systemctl status $@'
-
 
 # network
 alias pingg='ping -c 3 google.com'
@@ -67,5 +65,16 @@ alias screenshot_window='import $@'
 alias svn_precommit="svn status | grep '^!' | sed 's/! *//' | xargs -d '\n' svn delete --force"
 
 # search text files
-alias grepr='grep -rns $@'
+alias grepr='grep -rns'
+
+# svn
+# checkout
+alias svnco='svn checkout svn+ssh://crbrutus@svn/$@'
+# update immediates
+alias svnupim='svn up --set-depth immediates'
+# update infinity
+alias svnupinf='svn up --set-depth infinity'
+
+# open a file
+alias openf='xdg-open'
 
