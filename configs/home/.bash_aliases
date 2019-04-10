@@ -69,7 +69,7 @@ alias grepr='grep -rns'
 
 # svn
 # checkout
-alias svnco='svn checkout svn+ssh://crbrutus@svn/$@'
+svnco() { svn checkout svn+ssh://crbrutus@svn.ciholas.com/$1 --depth immediates; }
 # update immediates
 alias svnupim='svn up --set-depth immediates'
 # update infinity
