@@ -74,7 +74,12 @@ svnco() { svn checkout svn+ssh://crbrutus@svn.ciholas.com/$1 --depth immediates;
 alias svnupim='svn up --set-depth immediates'
 # update infinity
 alias svnupinf='svn up --set-depth infinity'
+# repair renamed files
+svn-repair() { mv -n -- "$2" "$1" && svn mv -- "$1" "$2"; }
 
 # open a file
 alias openf='xdg-open'
+
+# timestamp
+alias timestamp="ts '[%Y-%m-%d %H:%M:%S]'"
 
