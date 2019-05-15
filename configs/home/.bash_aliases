@@ -65,7 +65,7 @@ alias screenshot_window='import $@'
 alias svn_precommit="svn status | grep '^!' | sed 's/! *//' | xargs -d '\n' svn delete --force"
 
 # search text files
-alias grepr='grep -rns'
+alias grepr='grep -rnsI'
 
 # svn
 # checkout
