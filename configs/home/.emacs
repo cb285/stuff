@@ -11,6 +11,10 @@
   (transient-mark-mode 1) ;; No region when it is not highlighted
   (setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
 
+;; use spaces instead of tab character
+(setq indent-tabs-mode nil)
+(setq c-basic-offset 4)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -19,28 +23,12 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
- '(c-basic-offset 4)
- '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (whiteboard)))
- '(inhibit-startup-screen t)
- '(package-selected-packages (quote (auto-complete)))
- '(show-paren-mode t))
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes nil)
+ '(inhibit-startup-screen t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(setq package-archives 
-  '(("gnu" . "http://elpa.gnu.org/packages/")
-("marmalade" . "http://marmalade-repo.org/packages/")
-("melpa" . "http://melpa.org/packages/")))
-
-;; set indentions to 4 spaces
-(setq default-tab-width 4)
-;; set C indentations to 4 spaces
-(setq c-basic-offset 4)
-;; use spaces instead of tab character
-(setq indent-tabs-mode nil)

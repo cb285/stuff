@@ -69,7 +69,7 @@ alias grepr='grep -rnsI'
 
 # svn
 # checkout
-svnco() { svn checkout svn+ssh://crbrutus@svn.ciholas.com/$1 --depth immediates; }
+svnco() { svn checkout svn+ssh://crbrutus@svn.ciholas.com/repos/$1 --depth immediates; }
 # update immediates
 alias svnupim='svn up --set-depth immediates'
 # update infinity
@@ -83,3 +83,8 @@ alias openf='xdg-open'
 # timestamp
 alias timestamp="ts '[%Y-%m-%d %H:%M:%S]'"
 
+# new terminal in current directory
+alias newterm="urxvt -cd $(pwd) &"
+
+# emacs colors
+alias emacs="emacs --reverse-video"
