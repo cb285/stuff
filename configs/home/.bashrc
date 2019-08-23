@@ -112,6 +112,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# rtems vars
-export PATH=/home/clayton/ee458/rtems/4.11/bin:$PATH
-export RTEMS_MAKEFILE_PATH=/home/clayton/ee458/rtems/pc386/i386-rtems4.11/pc386/
+# nrfjprog
+export PATH=/opt/nrfjprog/:$PATH
+
+# saleae logic
+export PATH=~/opt/saleae/logic/:$PATH
+
+# gitlab token
+export ARTIFACT_TOKEN=
+export GEM_HOME=~/.gems
+export CIHOLAS_SVN_UTILS=~/opt/ciholas/svn-utils
+export PATH=$PATH:$CIHOLAS_SVN_UTILS
