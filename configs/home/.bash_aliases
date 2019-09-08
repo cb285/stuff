@@ -45,7 +45,7 @@ alias sstart='sudo systemctl start $@'
 alias sstatus='sudo systemctl status $@'
 
 # network
-alias pingg='ping -c 3 google.com'
+alias pingg='ping -c 5 google.com'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # change background
@@ -53,9 +53,9 @@ alias randbkgnd='feh --randomize --bg-scale ~/MEGA/Wallpapers/*'
 alias setbkgnd='feh --bg-scale $@'
 
 # kodi media controls
-alias media-clean='sh ~/.kodi-scripts/cleanLib.sh'
-alias media-update='sh ~/.kodi-scripts/updateLib.sh'
-alias media-filebot='sh ~/.kodi-scripts/filebot.sh'
+alias kodi-clean='sh ~/scripts/kodi/kodi_clean.sh'
+alias kodi-update='sh ~/scripts/kodi/kodi_update.sh
+alias media-process='sh ~/scripts/media_process.sh'
 
 # screen capturing
 alias screenshot='import -window root $@'
@@ -86,5 +86,3 @@ alias timestamp="ts '[%Y-%m-%d %H:%M:%S]'"
 # new terminal in current directory
 alias newterm="urxvt -cd $(pwd) &"
 
-# emacs colors
-alias emacs="emacs --reverse-video"

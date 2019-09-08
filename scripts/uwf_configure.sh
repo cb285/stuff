@@ -11,9 +11,6 @@ sudo -s ufw allow out to 10.0.1.0/24
 # allow dns
 sudo -s ufw allow out to any port 53
 
-# get vpn server ips
-#ip1=`dig +short nl-amsterdam.ra4wvpn.com | head -n 1`
-
 # allow vpn connection
 sudo -s ufw allow out 1194/udp
 sudo -s ufw allow out 443/tcp
