@@ -54,7 +54,7 @@ alias setbkgnd='feh --bg-scale $@'
 
 # kodi media controls
 alias kodi-clean='sh ~/scripts/kodi/kodi_clean.sh'
-alias kodi-update='sh ~/scripts/kodi/kodi_update.sh
+alias kodi-update='sh ~/scripts/kodi/kodi_update.sh'
 alias media-process='sh ~/scripts/media_process.sh'
 
 # screen capturing
