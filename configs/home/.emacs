@@ -6,6 +6,9 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; highlight brackets
+(show-paren-mode 1)
+
 (cua-mode t)
   (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
   (transient-mark-mode 1) ;; No region when it is not highlighted
