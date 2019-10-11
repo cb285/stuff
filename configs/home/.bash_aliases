@@ -86,3 +86,13 @@ alias timestamp="ts '[%Y-%m-%d %H:%M:%S]'"
 # new terminal in current directory
 alias newterm="urxvt -cd $(pwd) &"
 
+# remove files ending in ~
+alias rmtempfilestest="find . -name "*~" -type f"
+alias rmtempfiles="find . -name "*~" -type f -delete"
+
+# change file extensions
+rename-ext() { for file in *.${1}; do mv -- "${file}" "${file/%${1}/${2}}"; done }
+
+# ctags
+alias tagit="ctags -f TAGS -e -R"
+
