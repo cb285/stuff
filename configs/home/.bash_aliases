@@ -94,5 +94,7 @@ alias rmtempfiles="find . -name "*~" -type f -delete"
 rename-ext() { for file in *.${1}; do mv -- "${file}" "${file/%${1}/${2}}"; done }
 
 # ctags
-alias tagit="ctags -f TAGS -e -R"
+alias tagit="ctags -f ~/.emacs.d/TAGS -e -R"
 
+# rake - use 8 threads
+alias rakem="rake -m -j8"

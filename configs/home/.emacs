@@ -6,9 +6,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; highlight brackets
-(show-paren-mode 1)
-
 (cua-mode t)
   (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
   (transient-mark-mode 1) ;; No region when it is not highlighted
@@ -26,7 +23,7 @@
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+   ["gray" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(custom-enabled-themes nil)
  '(inhibit-startup-screen t))
 (custom-set-faces
@@ -35,3 +32,24 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+; highlight brackets
+(show-paren-mode 1)
+
+; background color
+(set-background-color "light gray")
+
+(global-set-key "%" 'match-paren)
+
+(defun match-paren (arg)
+  "Go to the matching paren if on a paren; otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s(") (forward-list 1) (backward-char 1))
+	((looking-at "\\s)") (forward-char 1) (backward-list 1))
+	(t (self-insert-command (or arg 1)))))
+
+(require 'ido)
+(ido-mode t)
+
+; tags
+(setq tags-table-list '("~/.emacs.d"))
