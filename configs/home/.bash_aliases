@@ -84,7 +84,7 @@ alias openf='xdg-open'
 alias timestamp="ts '[%Y-%m-%d %H:%M:%S]'"
 
 # new terminal in current directory
-alias newterm="urxvt -cd $(pwd) &"
+alias newterm="urxvt -cd "$(pwd)" &"
 
 # remove files ending in ~
 alias rmtempfilestest="find . -name "*~" -type f"
